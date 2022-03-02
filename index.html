@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landscaper Game</title>
+    <!-- FAVICON -->
+
+    <!-- FONTS -->
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="style.css">
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Landscaper Game</h1>
+    </header>
+    <main>
+        <div class="game-info">
+            <p>Game: You've decided to start your own landscaping business! Unfortunately, you don't have any money or
+                tools... yet! Luckily you do have some pretty sharp teeth and can make $1 per day mowing lawns.</p>
+            <p>Click "Start Game" below to start building your
+                business!</p>
+            <button onclick="startGame()">Start Game</button>
+            <p id="start-button"></p>
+        </div>
+        <section class="tool-library">
+            <div id="teeth"></div>
+            <div id="scissors"></div>
+            <div id="push-lawnmower"></div>
+            <div id="fancy-lawnmower"></div>
+            <div id="students"></div>
+        </section>
+        <section class="player-container">
+            <div class="current-dashboard">
+                <p>Current Tool: <span id="currentTool"></span></p>
+                <p>Total Money: $<span id="currentMoney"></span></p>
+                <p>Pay Rate: $<span id="currentPayRate"></span></p>
+            </div>
+            <button onclick="mowLawn()">Mow Lawn!</button>
+            <div class="game-prompt-container"></div>
+            <p id="gameplay"></p>
+        </section>
+    </main>
+    <footer>
+        <p>Designed & coded by Angela - 2022</p>
+    </footer>
+</body>
+
+</html>
