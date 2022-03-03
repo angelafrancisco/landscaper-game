@@ -61,14 +61,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to change Tool Inventory, unlock new tool, discard old one
     function changeTools() {
-        // select class 'modal-covering-tools' and add new class 'unlocked'
-        let lockedTool = document.querySelector('.modal-covering-tools');
-        lockedTool.classList.add('unlocked');
-    };
-    function discardTool() {
-        // select current tool class 'modal-used-tool', add class 'used'
-        let usedTool = document.querySelector('.modal-used-tool');
+        // select class 'current' and add new class 'used'
+        let usedTool = document.querySelector('.tool-img.current');
+        usedTool.classList.remove('current');
         usedTool.classList.add('used');
+        // select class 'locked' and add new class 'current'
+        let lockedTool = document.querySelector('.tool-img.locked');
+        lockedTool.classList.remove('locked');
+        lockedTool.classList.add('current');
     };
 
     // 3. At any point, if you are currently using your teeth, you can buy a pair of rusty scissors for $5. You can do this once, assuming you have enough money.
@@ -78,16 +78,15 @@ document.addEventListener('DOMContentLoaded', function () {
         if ((currentMoney >= toolInventory.price[1] && currentTool !== toolInventory.name[1]) && checkLandscaperTools == false) {
             let buyTool = `You earned enough to buy a new tool! You can buy some ${toolInventory.name[1]} for $${toolInventory.price[1]}.\nClick [OK] to buy or [Cancel] to not buy`;
             if (confirm(buyTool) == true) {
-                discardTool(currentTool);
                 currentMoney -= toolInventory.price[1];
                 currentTool = toolInventory.name[1];
                 currentPayRate = landscaper.payRate[1];
                 landscaper.tools.push(currentTool);
-                changeTools(currentTool);
                 buyTool = newPromptTextToTerminal(`You bought ${currentTool}! Now you'll earn $${currentPayRate} per day!`);
                 document.getElementById("currentTool").innerHTML = currentTool;
                 document.getElementById("currentMoney").innerHTML = currentMoney;
                 document.getElementById("currentPayRate").innerHTML = currentPayRate;
+                changeTools()
             } else {
                 buyTool = alert(`Okay, guess you'll be sticking with ${currentTool}`);
             };
@@ -104,16 +103,15 @@ document.addEventListener('DOMContentLoaded', function () {
         if ((currentMoney >= toolInventory.price[2] && currentTool !== toolInventory.name[2]) && checkLandscaperTools == false) {
             let buyTool = `You earned enough to buy a new tool! You can buy a ${toolInventory.name[2]} for $${toolInventory.price[2]}.\nClick [OK] to buy or [Cancel] to not buy`;
             if (confirm(buyTool) == true) {
-                discardTool(currentTool);
                 currentMoney -= toolInventory.price[2];
                 currentTool = toolInventory.name[2];
                 currentPayRate = landscaper.payRate[2];
                 landscaper.tools.push(currentTool);
-                changeTools(currentTool);
                 buyTool = newPromptTextToTerminal(`You bought an ${currentTool}! Now you'll earn $${currentPayRate} per day!`);
                 document.getElementById("currentTool").innerHTML = currentTool;
                 document.getElementById("currentMoney").innerHTML = currentMoney;
                 document.getElementById("currentPayRate").innerHTML = currentPayRate;
+                changeTools()
             } else {
                 buyTool = alert(`Okay, guess you'll be sticking with ${currentTool}`);
             };
@@ -131,16 +129,15 @@ document.addEventListener('DOMContentLoaded', function () {
         if ((currentMoney >= toolInventory.price[3] && currentTool !== toolInventory.name[3]) && checkLandscaperTools == false) {
             let buyTool = `You earned enough to buy a new tool! You can buy a ${toolInventory.name[3]} for $${toolInventory.price[3]}.\nClick [OK] to buy or [Cancel] to not buy`;
             if (confirm(buyTool) == true) {
-                discardTool(currentTool);
                 currentMoney -= toolInventory.price[3];
                 currentTool = toolInventory.name[3];
                 currentPayRate = landscaper.payRate[3];
                 landscaper.tools.push(currentTool);
-                changeTools(currentTool);
                 buyTool = newPromptTextToTerminal(`You bought a ${currentTool}! Now you'll earn $${currentPayRate} per day!`);
                 document.getElementById("currentTool").innerHTML = currentTool;
                 document.getElementById("currentMoney").innerHTML = currentMoney;
                 document.getElementById("currentPayRate").innerHTML = currentPayRate;
+                changeTools()
             } else {
                 buyTool = alert(`Okay, guess you'll be sticking with the ${currentTool}`);
             };
@@ -156,16 +153,15 @@ document.addEventListener('DOMContentLoaded', function () {
         if ((currentMoney >= toolInventory.price[4] && currentTool !== toolInventory.name[4]) && checkLandscaperTools == false) {
             let buyTool = `You earned enough to buy a whole new TEAM! You can buy a ${toolInventory.name[4]} for $${toolInventory.price[4]}.\nClick [OK] to buy or [Cancel] to not buy`;
             if (confirm(buyTool) == true) {
-                discardTool(currentTool);
                 currentMoney -= toolInventory.price[4];
                 currentTool = toolInventory.name[4];
                 currentPayRate = landscaper.payRate[4];
                 landscaper.tools.push(currentTool);
-                changeTools(currentTool);
                 buyTool = newPromptTextToTerminal(`You bought a ${currentTool}! Now you'll earn $${currentPayRate} per day!`);
                 document.getElementById("currentTool").innerHTML = currentTool;
                 document.getElementById("currentMoney").innerHTML = currentMoney;
                 document.getElementById("currentPayRate").innerHTML = currentPayRate;
+                changeTools()
             } else {
                 buyTool = alert(`Okay, guess you'll be sticking with the ${currentTool}`);
             };
