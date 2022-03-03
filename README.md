@@ -37,6 +37,10 @@ https://angelafrancisco.github.io/landscaper-game/
 ## Credits
 
 - Background image by [Daniel Watson](https://unsplash.com/@danielwatsondesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+- Teeth image by [Filip Mishevski](https://unsplash.com/@filipthedesigner?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/teeth?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+- Push lawnmower image found on [Gardenista](https://www.gardenista.com/posts/10-easy-pieces-reel-lawn-mowers-cordless/)
+- Fancy lawnmower image by [Zac Gudakov](https://unsplash.com/@zacgudakov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+- Image icons made by [Flat Icons](https://www.flaticon.com/authors/flat-icons) and [Eucalyp](https://www.flaticon.com/authors/eucalyp)  
   
 
 ## Project Requirements

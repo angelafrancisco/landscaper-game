@@ -22,34 +22,97 @@
         <h1>Landscaper Game</h1>
     </header>
     <main>
-        <div class="game-info">
-            <p>Game: You've decided to start your own landscaping business! Unfortunately, you don't have any money or
-                tools... yet! Luckily you do have some pretty sharp teeth and can make $1 per day mowing lawns.</p>
-            <p>Click "Start Game" below to start building your
-                business!</p>
-            <button onclick="startGame()">Start Game</button>
-            <p id="start-button"></p>
-        </div>
-        <section class="tool-library">
-            <div id="teeth"></div>
-            <div id="scissors"></div>
-            <div id="push-lawnmower"></div>
-            <div id="fancy-lawnmower"></div>
-            <div id="students"></div>
-        </section>
-        <section class="player-container">
-            <div class="current-dashboard">
-                <p>Current Tool: <span id="currentTool"></span></p>
-                <p>Total Money: $<span id="currentMoney"></span></p>
-                <p>Pay Rate: $<span id="currentPayRate"></span></p>
+        <div class="game-rules-container">
+            <div class="game-rules-box">
+                <h2>Game Rules:</h2>
+                <ul class="game-rules-list">
+                    <li>You are starting a landscaping business, but you have no money and the only tool you have is
+                        your
+                        own teeth.</li>
+                    <li>Earn money by mowing the lawn with your current tool.</li>
+                    <li>Level up your tools after earning enough money to buy the next tool.</li>
+                    <li>You win the game by acquiring the highest tool level plus $1,000.00!</li>
+                </ul>
             </div>
-            <button onclick="mowLawn()">Mow Lawn!</button>
+            <button id="start-button">NEW GAME</button>
+        </div>
+        <section class="tool-library-container">
+            <h2>Tool Inventory</h2>
+            <hr>
+            <div class="tool-img-box">
+                <div class="tool-img" id="teeth">
+                    <img src="images/01-teeth.png" alt="teeth icon">
+                    <div class="modal-used-tool">
+                        <div class="bar-1"></div>
+                        <div class="bar-2"></div>
+                    </div>
+                </div>
+                <div class="tool-img" id="scissors">
+                    <img src="images/02-scissors.png" alt="scissors icon">
+                    <div class="modal-covering-tools">
+                        <h3>LOCKED</h3>
+                    </div>
+                    <div class="modal-used-tool">
+                        <div class="bar-1"></div>
+                        <div class="bar-2"></div>
+                    </div>
+                </div>
+                <div class="tool-img" id="push-lawnmower">
+                    <img src="images/03-lawn-mower.png" alt="push lawnmower icon">
+                    <div class="modal-covering-tools">
+                        <h3>LOCKED</h3>
+                    </div>
+                    <div class="modal-used-tool">
+                        <div class="bar-1"></div>
+                        <div class="bar-2"></div>
+                    </div>
+                </div>
+                <div class="tool-img" id="fancy-lawnmower">
+                    <img src="images/04-lawnmower.png" alt="color lawnmower icon">
+                    <div class="modal-covering-tools">
+                        <h3>LOCKED</h3>
+                    </div>
+                    <div class="modal-used-tool">
+                        <div class="bar-1"></div>
+                        <div class="bar-2"></div>
+                    </div>
+                </div>
+                <div class="tool-img" id="students">
+                    <img src="images/05-students.png" alt="three students icon">
+                    <div class="modal-covering-tools">
+                        <h3>LOCKED</h3>
+                    </div>
+                    <div class="modal-used-tool">
+                        <div class="bar-1"></div>
+                        <div class="bar-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gameplay-container">
+            <div class="current-dashboard">
+                <p class="current-text">Current Tool: <span class="current-box" id="currentTool"></span></p>
+                <p class="current-text">Total Money: $ <span class="current-box" id="currentMoney"></span></p>
+                <p class="current-text">Pay Rate: $ <span class="current-box" id="currentPayRate"></span></p>
+            </div>
+            <button id="mow-lawn-button" disabled>Mow Lawn!</button>
             <div class="game-prompt-container"></div>
-            <p id="gameplay"></p>
+        </section>
+        <section class="terminal-prompt-container">
+            <div class="game-start-prompt">
+                <p><span class="day-color">Day <span class="day-count">00</span>: </span>So, you've decided to start
+                    your
+                    own landscaping business!
+                    Unfortunately, you don't have any money or
+                    tools... yet! Luckily you do have some pretty sharp teeth and can make $1 per day mowing lawns.
+                    Click 'Mow Lawn' to get CHOMPIN'!</p>
+            </div>
         </section>
     </main>
     <footer>
         <p>Designed & coded by Angela - 2022</p>
+        <a href="https://github.com/angelafrancisco/landscaper-game">(Check out my
+            code!)</a>
     </footer>
 </body>
 
